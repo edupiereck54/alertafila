@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — AlertaFila</title>
+<meta name="description" content="Política de privacidade da extensão AlertaFila para Chrome. A extensão não coleta, não armazena e não transmite nenhum dado.">
+<style>
+  :root {
+    --navy: #0f2240;
+    --navy-2: #16305a;
+    --amber: #e6aa28;
+    --bg: #f7f8fa;
+    --card: #fff;
+    --text: #1a1f2b;
+    --muted: #5b6472;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14161c; --card: #1c1f28; --text: #eaecf0; --muted: #9aa2b1; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font: 16px/1.65 -apple-system, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    background: linear-gradient(135deg, var(--navy), var(--navy-2));
+    color: #fff;
+    padding: 34px 24px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header h1 { margin: 0; font-size: 22px; }
+  header .tag { color: var(--amber); font-size: 12px; font-weight: 700; letter-spacing: .5px; }
+  header .sub { opacity: .85; font-size: 14px; margin-top: 6px; }
+  main { padding: 28px 24px 60px; }
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 22px 26px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    margin-bottom: 18px;
+  }
+  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .4px; color: var(--navy); margin: 0 0 10px; }
+  @media (prefers-color-scheme: dark) { h2 { color: var(--amber); } }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  code { background: rgba(15,34,64,.07); padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+  @media (prefers-color-scheme: dark) { code { background: rgba(230,170,40,.14); } }
+  .destaque {
+    border-left: 3px solid #0a7a4a;
+    background: rgba(10,122,74,.07);
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  footer { color: var(--muted); font-size: 13px; text-align: center; padding-bottom: 40px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="tag">ALERTAFILA · EXTENSÃO PARA CHROME</div>
+    <h1>Política de Privacidade</h1>
+    <div class="sub">Última atualização: 1º de agosto de 2026</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="card">
+    <p class="destaque">A extensão AlertaFila não coleta, não armazena, não
+      transmite e não compartilha nenhum dado pessoal. Não existe servidor.
+      Tudo acontece dentro do seu navegador.</p>
+  </div>
+
+  <div class="card">
+    <h2>Que dados a extensão acessa</h2>
+    <p>Para saber quando chegou a sua vez, a extensão lê o <strong>texto
+      visível</strong> da página do Balcão Virtual que você abriu —
+      especificamente, procura a sua posição na fila e avisos como “é a sua
+      vez”. Essa leitura acontece na memória do seu navegador, em tempo real, e
+      <strong>não é gravada em lugar nenhum</strong>.</p>
+    <p>A extensão só funciona nos endereços dos Balcões Virtuais declarados na
+      Chrome Web Store. Ela não tem acesso a nenhum outro site que você
+      visita.</p>
+  </div>
+
+  <div class="card">
+    <h2>Que dados a extensão guarda</h2>
+    <p>Apenas um item, e somente se você usá-lo: a <strong>lista de endereços de
+      tribunais que você adicionar manualmente</strong> na tela de
+      configurações. Fica salva no armazenamento do próprio Chrome
+      (<code>chrome.storage.sync</code>), sob a sua conta Google, e serve só
+      para a extensão saber onde funcionar. Você pode apagar a qualquer momento
+      pela mesma tela.</p>
+  </div>
+
+  <div class="card">
+    <h2>O que a extensão não faz</h2>
+    <ul>
+      <li>Não coleta nome, CPF, número de OAB, e-mail ou qualquer dado de identificação</li>
+      <li>Não registra números de processo, protocolos ou conteúdo de atendimentos</li>
+      <li>Não grava áudio, vídeo ou imagem</li>
+      <li>Não registra histórico de navegação</li>
+      <li>Não envia nada para nenhum servidor — a extensão não faz requisições de rede</li>
+      <li>Não usa cookies, rastreadores ou analytics</li>
+      <li>Não exibe anúncios</li>
+      <li>Não vende nem compartilha dados com terceiros (não há dados a vender)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Permissões e por que são necessárias</h2>
+    <ul>
+      <li><strong>Acesso aos sites dos Balcões Virtuais</strong> — ler o texto da
+        página para detectar a sua vez. É a função principal.</li>
+      <li><strong>Notificações</strong> — avisar quando chega a sua vez, mesmo com
+        o navegador minimizado.</li>
+      <li><strong>Armazenamento</strong> — guardar os tribunais que você adicionar
+        manualmente.</li>
+      <li><strong>Offscreen</strong> — tocar o alarme sonoro. Necessário porque o
+        navegador bloqueia áudio em páginas nas quais o usuário ainda não
+        clicou.</li>
+      <li><strong>activeTab e scripting</strong> — ativar o monitor manualmente,
+        por clique seu, em salas de videoconferência (ex.: Google Meet). Nunca é
+        automático: esses sites também hospedam reuniões pessoais, e a extensão
+        só age ali quando você aperta o botão.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Crianças</h2>
+    <p>A extensão é uma ferramenta profissional e não é direcionada a menores de
+      13 anos. Como não coleta dados de ninguém, não coleta dados de
+      crianças.</p>
+  </div>
+
+  <div class="card">
+    <h2>Alterações</h2>
+    <p>Mudanças nesta política serão publicadas nesta mesma página, com a data de
+      atualização revisada.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contato</h2>
+    <p>Dúvidas sobre privacidade: <strong>edupiereck@gmail.com</strong></p>
+  </div>
+
+  <footer>
+    AlertaFila é uma extensão independente, sem vínculo com o CNJ ou com
+    qualquer tribunal.
+  </footer>
+
+</main>
+</body>
+</html>
